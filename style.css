@@ -1,160 +1,162 @@
-    * {
-        overflow-x: hidden;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .clock-container {
-        font-weight: bold;
-        font-size: 18px;
-        height: 35px;
-        color: white;
-        background-color: rgb(77, 101, 238);
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-        overflow-y: hidden;
-    }
-    
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 50px 50px 30px;
-        grid-gap: 10px;
-        margin: 10px auto;
-        padding: 20px;
-        background-color: rgb(237, 238, 248);
-        border-radius: 10px;
-    }
-    
-    input {
-        grid-column: 2/4;
-        grid-row: 2;
-        width: 40vw;
-        font-size: 18px;
-        margin: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        text-align: center;
-        border-style: 1px solid;
-        border-bottom: none;
-        border-right: none;
-        box-shadow: inset 2px 4px 6px -3px rgba(117, 119, 238, 0.644);
-    }
-    
-    .remove {
-        width: 25px;
-        height: 25px;
-        font-size: 20px;
-        background-color: rgb(255, 72, 0);
-        color: white;
-        border: none;
-        border-radius: 20px;
-        margin-left: 20px;
-        overflow-y: hidden;
-    }
-    
-    #add-task {
-        grid-column: 2/2;
-        grid-row: 2;
-        height: 50px;
-        font-size: 16px;
-        background-color: rgb(77, 101, 238);
-        color: white;
-        border: none;
-        margin: 19px;
-        margin-left: 24px;
-        border-radius: 15px;
-        align-items: center;
-    }
-    
-    .save-task {
-        grid-column: 2/2;
-        grid-row: 3;
-        height: 50px;
-        font-size: 16px;
-        background-color: rgb(39, 201, 66);
-        color: white;
-        border: none;
-        margin: 19px;
-        margin-left: 24px;
-        border-radius: 15px;
-        align-items: center;
-    }
-    
-    button:hover {
-        cursor: pointer;
-    }
-    
-    tr:hover {
-        cursor: move;
-        overflow-y: hidden;
-    }
-    
-    h2 {
-        font-size: 40px;
-    }
-    
-    .btn {
-        width: 150px;
-        height: 40px;
-        display: block;
-        margin: 17px auto;
-        border-radius: 20px;
-        font-family: helvetica;
-        text-align: center;
-        text-transform: uppercase;
-        background-color: white;
-        border: 2px solid rgb(77, 101, 238);
-        cursor: pointer;
-    }
-    
-    .quote-container {
-        padding: 20px;
-        min-width: 100px;
-        margin: 19px auto;
-        text-align: center;
-        border: 2px solid rgb(77, 101, 238);
-        border-radius: 13px;
-        transition: all 0.5s ease-in;
-        color: rgb(48, 65, 73);
-        box-shadow: 0px 0px 15px 3px rgb(174, 182, 221);
-    }
-    
-    .quote-display {
-        line-height: 30px;
-        margin: 30px;
-        padding: 20px;
-        border: 1px solid rgb(214, 206, 206);
-        font-style: italic;
-        font-size: 20px;
-        border-radius: 15px;
-    }
-    
-    #quote-btn {
-        margin: 20px;
-        text-transform: uppercase;
-        background-color: white;
-        border: 1px solid #9E9E9E;
-        padding: 10px 30px;
-        cursor: pointer;
-    }
-    
-    .night-mode {
-        background-color: rgb(77, 101, 238);
-        color: white;
-    }
-    
-     ::-webkit-scrollbar {
-        width: 15px;
-    }
-    
-     ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px rgb(197, 197, 197);
-        border-radius: 10px;
-        background-color: white
-    }
-    
-     ::-webkit-scrollbar-thumb {
-        background: rgb(77, 101, 238);
-        border-radius: 20px;
-    }
+/* CSS */
+
+* {
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock-container {
+    font-weight: bold;
+    font-size: 18px;
+    height: 35px;
+    color: white;
+    background-color: rgb(77, 101, 238);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 50px 50px 30px;
+    grid-gap: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgb(237, 238, 248);
+    border-radius: 10px;
+}
+
+input {
+    grid-column: 2/4;
+    grid-row: 2;
+    width: 40vw;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border-style: 1px solid;
+    border-bottom: none;
+    border-right: none;
+    box-shadow: inset 2px 4px 6px -3px rgba(117, 119, 238, 0.644);
+}
+
+.remove {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    background-color: rgb(255, 72, 0);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-left: 20px;
+    overflow-y: hidden;
+}
+
+#add-task {
+    grid-column: 2/2;
+    grid-row: 2;
+    height: 50px;
+    font-size: 16px;
+    background-color: rgb(77, 101, 238);
+    color: white;
+    border: none;
+    margin: 19px;
+    margin-left: 24px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.save-task {
+    grid-column: 2/2;
+    grid-row: 3;
+    height: 50px;
+    font-size: 16px;
+    background-color: rgb(39, 201, 66);
+    color: white;
+    border: none;
+    margin: 19px;
+    margin-left: 24px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+tr:hover {
+    cursor: move;
+    overflow-y: hidden;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: 17px auto;
+    border-radius: 20px;
+    font-family: helvetica;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    border: 2px solid rgb(77, 101, 238);
+    cursor: pointer;
+}
+
+.quote-container {
+    padding: 20px;
+    min-width: 100px;
+    margin: 19px auto;
+    text-align: center;
+    border: 2px solid rgb(77, 101, 238);
+    border-radius: 13px;
+    transition: all 0.5s ease-in;
+    color: rgb(48, 65, 73);
+    box-shadow: 0px 0px 15px 3px rgb(174, 182, 221);
+}
+
+.quote-display {
+    line-height: 30px;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid rgb(214, 206, 206);
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+#quote-btn {
+    margin: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid #9E9E9E;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.night-mode {
+    background-color: rgb(77, 101, 238);
+    color: white;
+}
+
+ ::-webkit-scrollbar {
+    width: 15px;
+}
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(197, 197, 197);
+    border-radius: 10px;
+    background-color: white
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(77, 101, 238);
+    border-radius: 20px;
+}
