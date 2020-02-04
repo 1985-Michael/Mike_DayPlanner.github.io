@@ -17,32 +17,6 @@ $(document).ready(function() {
 //End of Night and Day Mode
 
 
-//Editable Drag, Drop, Add and Remove Function
-
-var html = '<tr><td><input type="text" name="name"></td><td><button class="remove">-</button></td></tr>';
-
-$(function() {
-
-    $('tbody').sortable();
-
-    $('#add-task').click(function() {
-        var x = document.getElementById("tables").rows.length;
-        if (x > 8) {
-            return alert(" Daily Task Limit ");
-
-        }
-
-        $('tbody').append(html);
-
-    });
-
-    $(document).on('click', '.remove', function() {
-        $(this).parents('tr').remove();
-    });
-
-});
-
-// End of Editable Drag, Drop, Add and Remove Function
 
 // Date Function
 
