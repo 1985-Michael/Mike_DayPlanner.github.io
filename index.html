@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <body onload="renderTimeClock();">
+
+        <div id="clockDisplay" class="clock-container"></div>
+
+        <button id="night-mode-js" class="btn night mode" data-text-swap="day mode" onclick="toggleBtn()">Night-mode</button>
+
+        <div class="quote-container">
+            <h2 id="heading">Daily Planner</h2>
+            <p id="quotes" class="quote-display">Hearing voices in your head is normal. Listening to them is quite common. Arguing with them – acceptable. It is only when you lose that argument that you get in real trouble.</p>
+
+            <div class="container">
+
+                <table id="tables">
+
+                    <tbody>
+                        <tr>
+
+                            <div class="input-container">
+
+                                <td><input type="text" name="server" value="" id="saveServer1" title="Set Task" placeholder="Add, Remove, Drag and Drop Tasks" required>
+                                </td>
+                                <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="server" value="" id="saveServer2" title="Set Task" placeholder="9:00AM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="text" name="server" value="" id="saveServer3" title="Set Task" placeholder="10:00AM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="server" value="" id="saveServer4" title="Set Task" placeholder="11:00PM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="server" value="" id="saveServer5" title="Set Task" placeholder="12:00PM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+
+
+                            <td><input type="text" name="server" value="" id="saveServer6" title="Set Task" placeholder="1:00PM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+
+
+                            <td><input type="text" name="server" value="" id="saveServer7" title="Set Task" placeholder="2:00PM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="text" name="server" value="" id="saveServer8" title="Set Task" placeholder="3:00PM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="text" name="server" value="" id="saveServer9" title="Set Task" placeholder="4:00PM" required>
+                            </td>
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="server" value="" id="saveServer10" title="Set Task" placeholder="5:00PM" required></td>
+
+                            <td><button class="remove" title="Delete Task">-</button></td>
+
+                            </div>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <button type="submit" title="Add New Task" id="add-task">Add Task</button>
+                <button type="button" title="Save Task" onclick="save()" class="save-task" id="save">Save Task</button>
+            </div>
+        </div>
+
+
+        <script>
+            var values = [];
+
+            var maxLength = 10;
+
+            function save() {
+
+                for (var i = 1; i <= maxLength; i++) {
+                    localStorage.saveServer
+
+                    var input = document.getElementById("saveServer" + i)
+                    values[i - 1] = input.value
+
+                }
+
+                localStorage.setItem("server", JSON.stringify(values))
+
+            }
+
+            var storedValues = localStorage.getItem("server");
+
+            if (storedValues) {
+                storedValues = JSON.parse(storedValues)
+            } else {
+                storedValues = []
+            }
+
+            for (let i = 1; i <= maxLength; i++) {
+                const element = document.getElementById("saveServer" + i)
+                element.value = storedValues[i - 1]
+            }
+        </script>
+
+
+        <script src="script.js"></script>
+
+
+
+    </body>
+
+</html>
