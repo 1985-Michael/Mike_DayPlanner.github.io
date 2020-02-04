@@ -68,6 +68,7 @@ input {
     margin-left: 24px;
     border-radius: 15px;
     align-items: center;
+    color: white;
 }
 
 button:hover {
