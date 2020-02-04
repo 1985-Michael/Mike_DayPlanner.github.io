@@ -136,10 +136,25 @@
 
             var storedValues = localStorage.getItem("server");
 
+
+
             if (storedValues) {
                 storedValues = JSON.parse(storedValues)
             } else {
-                storedValues = []
+                storedValues = [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+
+
+                ]
             }
 
             for (let i = 1; i <= maxLength; i++) {
