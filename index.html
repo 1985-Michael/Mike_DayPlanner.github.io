@@ -145,6 +145,9 @@
             for (let i = 1; i <= maxLength; i++) {
                 const element = document.getElementById("saveServer" + i)
                 element.value = storedValues[i - 1]
+                if (element.value == undefined) {
+                    element.value = ""
+                }
             }
         </script>
 
