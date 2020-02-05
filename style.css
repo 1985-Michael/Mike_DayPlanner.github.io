@@ -43,20 +43,6 @@ input {
     box-shadow: inset 2px 4px 6px -3px rgba(117, 119, 238, 0.644);
 }
 
-#add-task {
-    grid-column: 2/2;
-    grid-row: 2;
-    height: 50px;
-    font-size: 16px;
-    background-color: rgb(77, 101, 238);
-    color: white;
-    border: none;
-    margin: 19px;
-    margin-left: 24px;
-    border-radius: 15px;
-    align-items: center;
-}
-
 .save-task {
     grid-column: 2/2;
     grid-row: 2;
@@ -64,8 +50,8 @@ input {
     font-size: 16px;
     background-color: rgb(77, 101, 238);
     border: none;
-    margin: 19px;
-    margin-left: 24px;
+    margin: 12px;
+    margin-left: 11px;
     border-radius: 15px;
     align-items: center;
     color: white;
@@ -118,15 +104,6 @@ h2 {
     font-style: italic;
     font-size: 20px;
     border-radius: 15px;
-}
-
-#quote-btn {
-    margin: 20px;
-    text-transform: uppercase;
-    background-color: white;
-    border: 1px solid #9E9E9E;
-    padding: 10px 30px;
-    cursor: pointer;
 }
 
 .night-mode {
